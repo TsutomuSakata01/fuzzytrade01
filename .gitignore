@@ -1,0 +1,10 @@
+# Precompiled Headers
+*.mqh
+# Precompiled Files
+*.mq5
+*.mq4
+# Executables
+*.ex5
+*.ex4
+# TEXT
+*.txt
