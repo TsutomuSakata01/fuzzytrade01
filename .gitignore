@@ -8,3 +8,11 @@
 *.ex4
 # TEXT
 #*.txt
+#directory
+/MQL5/Experts/
+/MQL5/Include/MyFuzzy/Mamdani/
+/MQL5/Include/MyFuzzy/Optimize/
+/MQL5/Include/MyFuzzy/Sugeno/
+/MQL5/Indicators/
+/MQL5/Scripts/
+#
