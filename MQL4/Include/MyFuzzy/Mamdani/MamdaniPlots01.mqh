@@ -7,6 +7,7 @@
 #property link      "https://fuzzytrade.blogspot.com"
 #property version   "2.01"
 #property strict
+
 //-----RVI -1.0 ~ 1.0
 input double rvia1 = -1.0 ;
 input double rvia2 = -1.0 ;

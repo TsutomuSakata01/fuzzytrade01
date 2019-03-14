@@ -10,7 +10,7 @@
 #property indicator_separate_window
 #property indicator_buffers    1
 #property indicator_label1  "FuzzyMamdaniOsc01"
-#property indicator_color1  White
+#property indicator_color1  Red
 
 #include <MyFuzzy\Mamdani\FuzzyMamdani01.mqh>
 input string  p1="-- parameters: -- ";
