@@ -1,10 +1,11 @@
 //+------------------------------------------------------------------+
 //|                                               FuzzyMamdani01.mqh |
-//|                                    Copyright 2018,Tsutomu Sakata |
-//|                                    http://mql5fuzzy.blogspot.com |
+//|                                    Copyright 2019,Tsutomu Sakata |
+//|                                  https://fuzzytrade.blogspot.com |
 //+------------------------------------------------------------------+
-#property copyright "Copyright 2018,Tsutomu Sakata"
-#property link      "http://mql5fuzzy.blogspot.com"
+#property copyright "Copyright 2019,Tsutomu Sakata"
+#property link      "https://fuzzytrade.blogspot.com"
+#property version   "2.01"
 #property strict
 //+------------------------------------------------------------------+
 //|                                                                  |
@@ -205,10 +206,10 @@ double CMamdani::Mamdani(double t,double u,double v)
    delete result;
    
    delete fsSignal;
-   delete fvSignal;
-   delete fsrvi;
-   delete fsrsi;
-   delete fsac;
+   //delete fvSignal;
+   //delete fsrvi;
+   //delete fsrsi;
+   //delete fsac;
    
    return res;
   }  

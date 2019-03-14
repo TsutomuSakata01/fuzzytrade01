@@ -1,11 +1,11 @@
 //+------------------------------------------------------------------+
 //|                                            FuzzyMamdaniOsc01.mq4 |
-//|                                    Copyright 2018,Tsutomu Sakata |
-//|                                    http://mql5fuzzy.blogspot.com |
+//|                                    Copyright 2019,Tsutomu Sakata |
+//|                                  https://fuzzytrade.blogspot.com |
 //+------------------------------------------------------------------+
-#property copyright "Copyright 2018,Tsutomu Sakata"
-#property link      "http://mql5fuzzy.blogspot.com"
-#property version   "1.00"
+#property copyright "Copyright 2019,Tsutomu Sakata"
+#property link      "https://fuzzytrade.blogspot.com"
+#property version   "2.01"
 #property strict
 #property indicator_separate_window
 #property indicator_buffers    1
@@ -90,9 +90,9 @@ int OnCalculate(const int rates_total,
          b = iRSI(NULL,0,rsi_period,PRICE_OPEN,i);
          c=  iAC(NULL,0,i);
          
-         Buffer[i]=ma.Mamdani(a,b,c);
+         cBuffer[i]=ma.Mamdani(a,b,c);
          }
-         ArrayCopy(cBuffer,Buffer,0,0,visual);
+         ArrayCopy(Buffer,cBuffer,0,0,visual);
       }
 //---
 
@@ -106,7 +106,8 @@ int OnCalculate(const int rates_total,
       
       cBuffer[0]=ma.Mamdani(a,b,c);
       
-      ArrayCopy(Buffer,cBuffer,0,0,visual);
+      ArrayCopy(Buffer,cBuffer,0,0,1);
+      ArrayCopy(Buffer,cBuffer,1,0,visual-1);
        
      }      
       
