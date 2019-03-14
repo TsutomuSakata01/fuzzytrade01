@@ -1,18 +1,18 @@
 //+------------------------------------------------------------------+
 //|                                                       test11.mq5 |
-//|                                   Copyright 2018, TSutomu Sakata |
+//|                                   Copyright 2019, TSutomu Sakata |
 //|                                   https://fuzzytrade.blogspot.com|
 //+------------------------------------------------------------------+
-#property copyright "Copyright 2018, Tsutomu Sakata"
+#property copyright "Copyright 2019, Tsutomu Sakata"
 #property link      "https://fuzzytrade.blogspot.com"
-#property version   "1.00"
+#property version   "2.01"
 
 
 #include <Trade/Trade.mqh>
 
 //--- input parameters
-input int      Stop=50;
-input int      Take=100;
+input int      Stop=500;
+input int      Take=1000;
 input int      Magic=1001;
 input double   Lots=0.01;
 input int      Slipage=10;

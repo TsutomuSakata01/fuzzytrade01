@@ -1,11 +1,11 @@
 //+------------------------------------------------------------------+
 //|                                                   FuzzyEArvi.mq5 |
-//|                                   Copyright 2018, TSutomu Sakata |
+//|                                   Copyright 2019, TSutomu Sakata |
 //|                                   https://fuzzytrade.blogspot.com|
 //+------------------------------------------------------------------+
-#property copyright "Copyright 2018, Tsutomu Sakata"
+#property copyright "Copyright 2019, Tsutomu Sakata"
 #property link      "https://fuzzytrade.blogspot.com"
-#property version   "1.00"
+#property version   "2.01"
 
 #include <Trade/Trade.mqh>
 #include <MyFuzzy\Optimize\Fuzzy3Rvi01.mqh>
@@ -14,11 +14,15 @@ input string  p1="-- parameters1: -- ";
 input int     Magic=1001;
 input double  Lots=0.1;
 //input int     Slipage=10;
-input int     Stop=50;
-input int     TakeProfit=100;
+input int     Stop=500;
+input int     TakeProfit=1000;
 input string  p2="--EURUSD(0.07,-0.07)--GBPUSD(0.06,-0.12)--";
-input double  buylev = 0.07; 
-input double  selllev=-0.07; 
+input double  buylev = 0.15; 
+input double  selllev=-0.01; 
+
+input double  buycloselev = 0.0; 
+input double  sellcloselev=-0.0; 
+
 input string  p3="-- parameters3: -- ";
 input int     calculate=4;
 input int     rvi_period1=10;
@@ -150,19 +154,32 @@ void OnTick()
       double a1 = Rvi1[i];
       double b1 = Rvi2[i];
       double c1 = Rvi3[i];
+      
       CMamdani ma;
       Buffer[i]=ma.Mamdani(a1,b1,c1);
+      Comment(Buffer[1]);
      }
+     
 //---entry signal calculate     
    bool Buy_sig=false;
    bool Sell_sig=false;
+   /*
    if(Buffer[2]<=buylev && Buffer[1]>buylev)  Buy_sig=true;
    if(Buffer[2]>=selllev && Buffer[1]<selllev)Sell_sig=true;
+   */
+   if(Buffer[1]>buylev)  Buy_sig=true;
+   if(Buffer[1]<selllev)Sell_sig=true;
+   
 //---exite signal calculate 
    bool BuyClose_sig =false;
    bool SellClose_sig=false;
+   /*
    if( Buffer[2]>Buffer[1] && Buffer[3]>=Buffer[2])  BuyClose_sig =true;
    if( Buffer[2]<Buffer[1] && Buffer[3]<=Buffer[2])  SellClose_sig=true; 
+   */
+   if( Buffer[1]<buycloselev )  BuyClose_sig =true;
+   if( Buffer[1]>sellcloselev)  SellClose_sig=true; 
+   
 //---position signal
    bool Buy_pos =false;
    bool Sell_pos=false;
@@ -206,6 +223,7 @@ void OnTick()
       m_trade.PositionOpen(Symbol(),ORDER_TYPE_SELL,l,p,0,0,"");
 
      }
+     
 
    if(Sell_pos && SellClose_sig)
      {
@@ -220,5 +238,6 @@ void OnTick()
       m_trade.PositionClose(Symbol());
       return;
      }
+
   }
 //------------------------------------

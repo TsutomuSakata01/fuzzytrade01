@@ -1,16 +1,15 @@
 //+------------------------------------------------------------------+
 //|                                                      Myclose.mq5 |
-//|                                   Copyright 2017, Tsutomu Sakata |
+//|                                   Copyright 2019, Tsutomu Sakata |
 //|                                             https://www.mql5.com |
 //+------------------------------------------------------------------+
-#property copyright "Copyright 2017, Tsutomu Sakata"
-#property link      "https://"
-#property version   "1.00"
+#property copyright "Copyright 2019, Tsutomu Sakata"
+#property link      "https://fuzzytrade.blogspot.com"
+#property version   "2.01"
 #property description "Close Of Posistion"
 #property script_show_inputs
 
 #include <Trade/Trade.mqh>
-
 //+------------------------------------------------------------------+
 //| Script program start function                                    |
 //+------------------------------------------------------------------+
@@ -31,7 +30,7 @@ void OnStart()
         }
      }
 
-    if(Sell_pos || Buy_pos)
+   if(Sell_pos || Buy_pos)
      {
       CTrade m_trade;
       m_trade.PositionClose(Symbol());
@@ -39,4 +38,3 @@ void OnStart()
 
   }
 //+------------------------------------------------------------------+
-

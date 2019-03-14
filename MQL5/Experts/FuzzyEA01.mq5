@@ -1,11 +1,11 @@
 //+------------------------------------------------------------------+
 //|                                                    FuzzyEA01.mq5 |
-//|                                   Copyright 2018, TSutomu Sakata |
+//|                                   Copyright 2019, TSutomu Sakata |
 //|                                   https://fuzzytrade.blogspot.com|
 //+------------------------------------------------------------------+
-#property copyright "Copyright 2018, Tsutomu Sakata"
+#property copyright "Copyright 2019, Tsutomu Sakata"
 #property link      "https://fuzzytrade.blogspot.com"
-#property version   "1.00"
+#property version   "2.01"
 
 #include <Trade/Trade.mqh>
 #include <MyFuzzy\Mamdani\FuzzyMamdani01.mqh>
@@ -14,8 +14,8 @@ input string  p1="-- parameters: -- ";
 input int     Magic=1001;
 input double  Lots=0.1;
 //input int     Slipage=10;
-input int     Stop=50;
-input int     TakeProfit=50;
+input int     Stop=500;
+input int     TakeProfit=500;
 input string  p2="-- parameters: -- ";
 input int     calculate=4;
 input double  buylev = 0.07;
@@ -152,6 +152,7 @@ void OnTick()
       double c1 =Ac[i];
       CMamdani ma;
       Buffer[i]=ma.Mamdani(a1,b1,c1);
+      //Comment(Buffer[1]);
      }
 //---entry signal calculate     
    bool Buy_sig=false;

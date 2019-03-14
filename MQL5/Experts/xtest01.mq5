@@ -1,11 +1,11 @@
 //+------------------------------------------------------------------+
 //|                                                      xtest01.mq5 |
-//|                                   Copyright 2018, TSutomu Sakata |
+//|                                   Copyright 2019, TSutomu Sakata |
 //|                                  https://fuzzytrade.blogspot.com |
 //+------------------------------------------------------------------+
-#property copyright "Copyright 2018, Tsutomu Sakata"
+#property copyright "Copyright 2019, Tsutomu Sakata"
 #property link      "https://fuzzytrade.blogspot.com"
-#property version   "1.00"
+#property version   "2.01"
 
 int c,bar1,bar2;
 datetime date1,date2;

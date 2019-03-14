@@ -1,16 +1,16 @@
 //+------------------------------------------------------------------+
 //|                                                         MomW.mq5 |
-//|                                   Copyright 2018, Tsutomu Sakata |
+//|                                   Copyright 2019, Tsutomu Sakata |
 //|                                  https://fuzzytrade.blogspot.com |
 //+------------------------------------------------------------------+
-#property copyright "Copyright 2018,Tsutomu Sakata"
+#property copyright "Copyright 2019,Tsutomu Sakata"
 #property link      "https://fuzzytrade.blogspot.com"
-#property version   "1.00"
+#property version   "2.01"
 #property indicator_separate_window
 #property indicator_buffers 1
 #property indicator_plots   1
 #property indicator_type1   DRAW_LINE
-#property indicator_color1  DodgerBlue
+#property indicator_color1  Red
 #property indicator_width1  1
 //---- input parameters
 //***

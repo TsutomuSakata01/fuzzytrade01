@@ -1,11 +1,11 @@
 //+------------------------------------------------------------------+
 //|                                               FuzzyEAMamdani.mq4 |
-//|                                    Copyright 2018,Tsutomu Sakata |
-//|                                    http://mql5fuzzy.blogspot.com |
+//|                                    Copyright 2019,Tsutomu Sakata |
+//|                                  https://fuzzytrade.blogspot.com |
 //+------------------------------------------------------------------+
-#property copyright "Copyright 2018,Tsutomu Sakata"
+#property copyright "Copyright 2019,Tsutomu Sakata"
 #property link      "http://mql5fuzzy.blogspot.com"
-#property version   "1.00"
+#property version   "2.01"
 //---no.1*
 #property strict
 //#include <Trade/Trade.mqh>
@@ -15,8 +15,8 @@ input string  p1="-- parameters: -- ";
 input int     Magic=1001;
 input double  Lots=1.0;
 input int     Slipage=20;
-input int     Stop=50;
-input int     TakeProfit=100;
+input int     Stop=500;
+input int     TakeProfit=1000;
 input string  p2="-- parameters: -- ";
 input int     calculate=4;
 input double  buylev = 0.03;

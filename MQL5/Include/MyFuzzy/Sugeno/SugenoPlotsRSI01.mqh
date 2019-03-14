@@ -1,11 +1,11 @@
 //+------------------------------------------------------------------+
 //|                                             SugenoPlotsRSI01.mqh |
-//|                                   Copyright 2018,Tsutomu Sakata  |
+//|                                   Copyright 2019,Tsutomu Sakata  |
 //|                                   https://fuzzytrade.blogspot.com|         
 //+------------------------------------------------------------------+
-#property copyright "Copyright 2018,Tsutomu Sakata"
+#property copyright "Copyright 2019,Tsutomu Sakata"
 #property link      "https://fuzzytrade.blogspot.com"
-#property version   "1.00"
+#property version   "2.01"
 
 //-----RSI 0.0 ~ 100.0 
 input double rsia1 =  0.0 ;
@@ -22,6 +22,5 @@ input double rsic1 = 50.0 ;
 input double rsic2 = 80.0 ;
 input double rsic3 =100.0 ;
 input double rsic4 =100.0 ;
-
 
 //+------------------------------------------------------------------+

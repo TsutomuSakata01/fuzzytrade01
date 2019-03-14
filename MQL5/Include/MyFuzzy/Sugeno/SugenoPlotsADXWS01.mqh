@@ -1,11 +1,11 @@
 //+------------------------------------------------------------------+
 //|                                             SugenoPlotsADXWS.mqh |
-//|                                   Copyright 2018,Tsutomu Sakata  |
+//|                                   Copyright 2019,Tsutomu Sakata  |
 //|                                   https://fuzzytrade.blogspot.com|         
 //+------------------------------------------------------------------+
-#property copyright "Copyright 2018,Tsutomu Sakata"
+#property copyright "Copyright 2019,Tsutomu Sakata"
 #property link      "https://fuzzytrade.blogspot.com"
-#property version   "1.00"
+#property version   "2.01"
 
 //---- ADXWS -25.0 ~ 25.0
 input double adxwsa1 = -25.0 ;

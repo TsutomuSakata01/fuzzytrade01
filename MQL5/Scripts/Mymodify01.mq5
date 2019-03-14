@@ -1,18 +1,18 @@
 //+------------------------------------------------------------------+
 //|                                                   Mymodify01.mq5 |
-//|                                  Copyright 2017, Tsutomu Sakata. |
+//|                                  Copyright 2019, Tsutomu Sakata. |
 //|                                             https://www.         |
 //+------------------------------------------------------------------+
-#property copyright "Copyright 2017, Tsutomu Sakata"
-#property link      "https://"
-#property version   "1.00"
+#property copyright "Copyright 2019, Tsutomu Sakata"
+#property link      "https://fuzzytrade.blogspot.com"
+#property version   "2.01"
 #property description "Modify Of Posistion"
 #property script_show_inputs
 
 #include <Trade/Trade.mqh>
 
-input int     Stop=50;
-input int     TakeProfit=50;
+input int     Stop=500;
+input int     TakeProfit=500;
 //+------------------------------------------------------------------+
 //| Script program start function                                    |
 //+------------------------------------------------------------------+
